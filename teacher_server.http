@@ -1,0 +1,67 @@
+# POST http://localhost:3000/teacher  HTTP/1.1
+# Content-Type: application/json 
+
+# {
+#     "t_id":"1"
+# }
+
+###
+POST http://localhost:3000/student  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "s_id":"1"
+}
+
+###
+POST http://localhost:3000/teacher/create_activity HTTP/1.1
+Content-Type: application/json
+
+{
+    "s_id": "1",
+    "section_id": "1",
+    "t_id": "1",
+    "content": "Activity content"
+}
+
+###
+POST http://localhost:3000/teacher/show_activity HTTP/1.1
+Content-Type: application/json
+
+{
+  "s_id": "1"
+}
+
+###
+POST http://localhost:3000/teacher HTTP/1.1
+Content-Type: application/json
+
+{
+    "t_id": "1"
+}
+
+###
+POST http://localhost:3000/teacher/show_class HTTP/1.1
+Content-Type: application/json
+
+{
+  "t_id": "1"
+}
+
+###
+POST http://localhost:3000/teacher/update_marks HTTP/1.1
+Content-Type: application/json
+
+{
+  "exam_id": 1,
+  "subject_id": 1
+}
+
+###
+
+POST http://localhost:3000/teacher/show_mark HTTP/1.1
+Content-Type: application/json
+
+{
+  "exam_id": "1"
+}
