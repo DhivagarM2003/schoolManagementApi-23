@@ -1,14 +1,14 @@
 module.exports = {
   HOST: "localhost",
   USER: "root",
-  PASSWORD: "Dhiva",
+  PASSWORD: "Dhiva2003@",
   DB: "school_mate",
   dialect: "mysql",
-  //   dialectOptions: { ssl: true },
+  //dialectOptions: {ssl:true},
   pool: {
     max: 5,
     min: 0,
-    acquire: 50000,
-    idle: 5432,
+    acquire: 5000,
+    idle: 3306,
   },
 };
