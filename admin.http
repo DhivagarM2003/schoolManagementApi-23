@@ -1,0 +1,135 @@
+POST http://localhost:3000/admin/create_admin  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "institute_name":"CEG",
+    "phone_no":"1234567890",
+    "current_plan":"1205",
+    "plan_expire":"2018-08-12 00:00:00"
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/create_student  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "s_name":"Arul",
+    "admin_id":"1",
+    "section_id":"1",
+    "blood_group":"B+",
+    "address":"Chennai",
+    "father_name":"Adnan",
+    "emis_no":"4655654789",
+    "fees":"20000",
+    "due":"12000",
+    "phone_no_1":"1254689724",
+    "phone_no_2":"4567891235",
+    "gender":"Male",
+    "img":""
+}
+
+
+###
+
+POST http://localhost:3000/admin/create_section  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "section_name":"12",
+    "t_id":"1",
+    "standard":"12th"
+}
+
+
+
+###
+
+
+POST http://localhost:3000/admin/create_teacher  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "t_name":"SOS",
+    "admin_id":"1",
+    "phone_no":"5456687899",
+    "qualification":"M.E. CS",
+    "gender":"Female",
+    "img":"",
+    "designation":"",
+    "bank_ac_detail":"",
+    "address":"Chennai",
+    "salary":"52000"
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/create_exam  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "e_name":"Mid-term",
+    "standard":"12th",
+    "subjects":"Maths",
+    "e_date":"2018-05-12 00:00:00"
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/view_personal  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "admin_id":"1"
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/view_section  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "admin_id":"1"
+}
+
+
+
+###
+
+
+POST http://localhost:3000/admin/view_student  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "admin_id":"1"
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/view_teacher  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "admin_id":"1"
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/view_exam  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "admin_id":"1"
+}

@@ -5,6 +5,13 @@ module.exports = (sequelize, DataTypes) => {
     e_name: {
       type: DataTypes.STRING,
     },
+    admin_id: {
+      type: DataTypes.STRING,
+      references: {
+        model: "admins",
+        key: "admin_id",
+      },
+    },
     e_id: {
       type: DataTypes.STRING,
       primaryKey: true,
