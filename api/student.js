@@ -3,7 +3,7 @@ const express = require("express");
 const db = require('../models/database');
 
 
-
+const { Op } = require('sequelize');
 const router =express.Router()
 
 //router.use(bodyparser.urlencoded({ extended: false }));
