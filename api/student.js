@@ -34,7 +34,7 @@ router.post("/phone", async (req, res) => {
   const phone = req.body.phone;
   // console.log(name)
   // const inf = await db.student.findOne({ where: { phone_no_1: phone } });
-  const inf = await db.student.findOne({ where: { [Op.or]: [{ phone_no_1: phone }, { phone_no_2: phone }] } });
+  const inf = await db.student.findAll({ where: { [Op.or]: [{ phone_no_1: phone }, { phone_no_2: phone }] } });
 
   res.status(200).json(inf);
 });
