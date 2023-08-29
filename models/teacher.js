@@ -1,42 +1,39 @@
-module.exports = (sequelize, DataType) => {
+module.exports = (sequelize, DataTypes) => {
   const teacher = sequelize.define("teacher", {
     t_name: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     t_id: {
-      type: DataType.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
+      
     },
-    admin_id: {
-      type: DataType.STRING,
-      references: {
-        model: "admins",
-        key: "admin_id",
-      },
-    },
+   
+    
     phone_no: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     qualification: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     gender: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     img: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     designation: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     bank_ac_detail: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     address: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
     salary: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
     },
   });
   return teacher;

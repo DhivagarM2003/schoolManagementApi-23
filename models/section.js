@@ -4,11 +4,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     section_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     t_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "teachers",
         key: "t_id",
@@ -16,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     standard: {
       type: DataTypes.STRING,
+      
     },
   });
 

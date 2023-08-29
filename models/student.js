@@ -4,18 +4,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     s_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
+      
     },
-    admin_id: {
-      type: DataTypes.STRING,
-      references: {
-        model: "admins",
-        key: "admin_id",
-      },
-    },
+     
     section_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "sections",
         key: "section_id",
