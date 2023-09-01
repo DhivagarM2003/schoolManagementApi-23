@@ -52,6 +52,7 @@ class SubjectStaff {
     }
 }
 module.exports = SubjectStaff;
+
 /*
 console.log(SubjectStaff.createSubjectStaff(db,{
     "id":"1",

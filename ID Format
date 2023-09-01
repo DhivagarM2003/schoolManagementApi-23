@@ -1,0 +1,18 @@
+"admin_id" : 4 DIGIT 
+
+"standard_name" : 01, 02, 03 ,04 ...
+
+"section_id" : 05A                   stdCODE 05 THEN SEC CODE A,B,C
+
+"teacher_id" : 4 DIGIT ROLL NO 
+
+"subject_id" : ENG TAM MAT SCI SS GK CS 
+
+// subject_staff
+"id" : 
+
+"student_id" : 5 DIGIT ROLL NO
+
+"exam_id" : "YYYYHF01ENG            ( QUARTERLY.QT HALFYEARLY.HF ANNUAL.AN ) THEN STANDARD 01,02,03....12 then sub id
+
+

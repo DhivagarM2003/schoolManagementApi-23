@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement : true,
     },
-    standard: {
+    standard_name: {
       type: DataTypes.STRING,
       
     },
@@ -22,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     e_date: {
       type: DataTypes.DATE,
     },
+    acad_year:{
+      type: DataTypes.STRING,
+    }
   });
 
   return exams;

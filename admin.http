@@ -16,9 +16,8 @@ POST http://localhost:3000/admin/create_student  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "s_name":"Arul",
-    "admin_id":"1",
-    "section_id":"1",
+    "s_name":"hiupdated",
+    
     "blood_group":"B+",
     "address":"Chennai",
     "father_name":"Adnan",
@@ -34,16 +33,34 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/admin/create_section  HTTP/1.1
+POST http://localhost:3000/admin/update_student  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "section_name":"12",
-    "t_id":"1",
-    "standard":"12th"
+    "s_id": "2",
+    "s_name":"Monisha",
+    
+    "blood_group":"B+",
+    "address":"Chennai",
+    "father_name":"Adnan",
+    "emis_no":"4655654789",
+    "fees":"20000",
+    "due":"12000",
+    "phone_no_1":"1254689724",
+    "phone_no_2":"4567891235",
+    "gender":"Male",
+    "img":""
 }
 
+###
 
+POST http://localhost:3000/admin/delete_student  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "s_id": "3"
+
+}
 
 ###
 
@@ -51,7 +68,7 @@ Content-Type: application/json
 POST http://localhost:3000/admin/create_teacher  HTTP/1.1
 Content-Type: application/json 
 
-{   "t_id":"1",
+{   
     "t_name":"SOS",
     "phone_no":"5456687899",
     "qualification":"M.E. CS",
@@ -67,16 +84,206 @@ Content-Type: application/json
 ###
 
 
-POST http://localhost:3000/admin/create_exam  HTTP/1.1
+POST http://localhost:3000/admin/update_teacher  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "e_name":"Mid-term",
-    "standard":"12th",
-    "subjects":"Maths",
-    "e_date":"2018-05-12 00:00:00"
+    "t_id": "3",
+    "t_name":"SOS",
+    "phone_no":"5456687899",
+    "qualification":"M.E. CS",
+    "gender":"Female",
+    "img":"",
+    "designation":"",
+    "bank_ac_detail":"",
+    "address":"Chennai",
+    "salary":"52000"
+
 }
 
+###
+
+
+POST http://localhost:3000/admin/delete_teacher  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "s_id": "3"
+
+}
+
+###
+
+POST http://localhost:3000/admin/create_standard  HTTP/1.1
+Content-Type: application/json 
+
+{
+     "standard_name": "01",
+     "curriculum": "Ennum Ezuthum"
+}
+
+###
+
+POST http://localhost:3000/admin/update_standard  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+     "standard_name":"01",
+    "curriculum":"Ennum Ezhuthum(EE)"
+}
+
+###
+
+POST http://localhost:3000/admin/delete_standard  HTTP/1.1
+Content-Type: application/json 
+
+{
+     "standard_name": "01"
+     
+}
+
+
+###
+
+POST http://localhost:3000/admin/create_section  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "section_name":"12",
+    "t_id":"1",
+    "standard":"12th"
+}
+
+
+###
+
+
+
+POST http://localhost:3000/admin/update_section  HTTP/1.1
+Content-Type: application/json 
+
+{   "section_id":"1",
+    "section_name":"12",
+    "t_id":"1",
+    "standard":"11th"
+}
+
+###
+
+
+
+POST http://localhost:3000/admin/delete_section  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+      "section_id":"1"
+
+}
+
+###
+
+
+POST http://localhost:3000/admin/create_subject  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+       "subject_id":"01ENG",
+    "subject_name":"Englishhhhh",
+    "standard_name":"class 2"
+
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/update_subject  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+       "subject_id":"01ENG",
+    "subject_name":"Englis",
+    "standard_name":"class 2"
+
+}
+
+
+###
+
+
+POST http://localhost:3000/admin/delete_subject  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+       "subject_id":"01ENG",
+    
+
+}
+###
+
+POST http://localhost:3000/admin/create_exam  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+       "e_name":"Mid-term",
+    "standard":"12th",
+    "subjects":"Maths",
+    "e_date":"2018-05-12 00:00:00",
+    "acad_year":"2021"
+    
+
+}
+###
+
+POST http://localhost:3000/admin/update_exam  HTTP/1.1
+Content-Type: application/json 
+
+{ 
+       "e_id":"1",
+       "e_name":"Mid-term",
+    "standard":"12th",
+    "subjects":"Science",
+    "e_date":"2018-05-12 00:00:00",
+    "acad_year":"2021"
+    
+
+}
+
+
+###
+
+POST http://localhost:3000/admin/delete_exam  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "e_id":"1"
+}
+
+
+###
+
+POST http://localhost:3000/admin/create_subjectstaff HTTP/1.1
+Content-Type: application/json 
+
+{
+    "subject_id":"2",
+    "teacher_id":"1",
+    "section_id":"1"
+}
+
+
+
+###
+
+POST http://localhost:3000/admin/update_subjectstaff HTTP/1.1
+Content-Type: application/json 
+
+{
+    
+    "subject_id":"2",
+    "teacher_id":"1",
+    "section_id":"1"
+}
 
 ###
 
@@ -132,3 +339,5 @@ Content-Type: application/json
 {
     "admin_id":"1"
 }
+
+###
