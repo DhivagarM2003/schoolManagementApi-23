@@ -69,7 +69,7 @@ POST http://localhost:3000/admin/create_teacher  HTTP/1.1
 Content-Type: application/json 
 
 {   
-    "t_name":"SOS",
+    "t_name":"Swamy",
     "phone_no":"5456687899",
     "qualification":"M.E. CS",
     "gender":"Female",
@@ -88,7 +88,7 @@ POST http://localhost:3000/admin/update_teacher  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "t_id": "3",
+    "t_id": "1",
     "t_name":"SOS",
     "phone_no":"5456687899",
     "qualification":"M.E. CS",
@@ -108,7 +108,7 @@ POST http://localhost:3000/admin/delete_teacher  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "s_id": "3"
+    "t_id": "1"
 
 }
 
@@ -118,7 +118,7 @@ POST http://localhost:3000/admin/create_standard  HTTP/1.1
 Content-Type: application/json 
 
 {
-     "standard_name": "01",
+     "standard_name": "03",
      "curriculum": "Ennum Ezuthum"
 }
 
@@ -129,7 +129,7 @@ Content-Type: application/json
 
 { 
      "standard_name":"01",
-    "curriculum":"Ennum Ezhuthum(EE)"
+    "curriculum":"new chngnnnnnnnnnnnnnnug"
 }
 
 ###
@@ -150,7 +150,7 @@ Content-Type: application/json
 
 {
     "section_name":"12",
-    "t_id":"1",
+    "t_id":"2",
     "standard":"12th"
 }
 
@@ -162,10 +162,10 @@ Content-Type: application/json
 POST http://localhost:3000/admin/update_section  HTTP/1.1
 Content-Type: application/json 
 
-{   "section_id":"1",
+{   "section_id":"4",
     "section_name":"12",
-    "t_id":"1",
-    "standard":"11th"
+    "t_id":"2",
+    "standard":"10th"
 }
 
 ###
@@ -176,7 +176,7 @@ POST http://localhost:3000/admin/delete_section  HTTP/1.1
 Content-Type: application/json 
 
 { 
-      "section_id":"1"
+      "section_id":"4"
 
 }
 
@@ -187,9 +187,9 @@ POST http://localhost:3000/admin/create_subject  HTTP/1.1
 Content-Type: application/json 
 
 { 
-       "subject_id":"01ENG",
-    "subject_name":"Englishhhhh",
-    "standard_name":"class 2"
+       "subject_id":"02",
+    "subject_name":"tammmmmmmmm",
+    "standard_name":"03"
 
 }
 
@@ -201,9 +201,9 @@ POST http://localhost:3000/admin/update_subject  HTTP/1.1
 Content-Type: application/json 
 
 { 
-       "subject_id":"01ENG",
+       "subject_id":"01",
     "subject_name":"Englis",
-    "standard_name":"class 2"
+    "standard_name":"03"
 
 }
 
@@ -215,7 +215,7 @@ POST http://localhost:3000/admin/delete_subject  HTTP/1.1
 Content-Type: application/json 
 
 { 
-       "subject_id":"01ENG",
+       "subject_id":"02"
     
 
 }

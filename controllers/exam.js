@@ -24,7 +24,7 @@ class Exam {
             });
 
             if (updatedCount > 0) {
-                return updatedExams;
+                return true;
             } else {
                 throw new Error(`Exam with e_id ${e_id} not found.`);
             }

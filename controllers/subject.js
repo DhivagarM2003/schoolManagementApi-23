@@ -23,7 +23,7 @@ class Subject {
             });
 
             if (updatedCount > 0) {
-                return updatedSubjects;
+                return true;
             } else {
                 throw new Error(`Subject with subject_id ${subject_id} not found.`);
             }

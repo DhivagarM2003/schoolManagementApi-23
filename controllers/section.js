@@ -21,7 +21,7 @@ static async updateSection(db, section_id, updatedData) {
         });
 
         if (updatedCount > 0) {
-            return updatedSections;
+            return true;
         } else {
             throw new Error(`Section with section_id ${section_id} not found.`);
         }
@@ -52,7 +52,7 @@ static async deleteSection(db, section_id) {
 }
 
 module.exports = Section;
-
+/*
 console.log(Section.createSection(db,{
     "section_name":"A",
     "section_id":"1",
@@ -60,5 +60,5 @@ console.log(Section.createSection(db,{
     "standard": "class 1",
 
 }))
-
+*/
 

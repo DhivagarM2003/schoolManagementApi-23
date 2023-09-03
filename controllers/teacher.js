@@ -22,7 +22,7 @@ class Teacher {
             });
 
             if (updatedCount > 0) {
-                return updatedTeachers;
+                return true;
             } else {
                 throw new Error(`Teacher with teacher_id ${t_id} not found.`);
             }

@@ -24,7 +24,7 @@ class Student {
             });
 
             if (updatedCount > 0) {
-                return updatedStudents;
+                return true;
             } else {
                 throw new Error(`Student with s_id ${s_id} not found.`);
             }

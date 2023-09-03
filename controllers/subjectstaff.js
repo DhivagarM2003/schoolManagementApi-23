@@ -24,7 +24,7 @@ class SubjectStaff {
             });
 
             if (updatedCount > 0) {
-                return updatedSubjectStaffs;
+                return true;
             } else {
                 throw new Error(`SubjectStaff with id ${id} not found.`);
             }
