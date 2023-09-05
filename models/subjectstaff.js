@@ -3,14 +3,14 @@ module.exports = (sequelize, DataType) => {
       
       
         subject_id: {
-        type: DataType.INTEGER,
+        type: DataType.STRING,
         references: {
             model: "subjects",
             key: "subject_id",
           },
       },
       teacher_id: {
-        type: DataType.INTEGER,
+        type: DataType.STRING,
         references: {
             model: "teachers",
             key: "t_id",
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataType) => {
         
       },
       section_id: {
-        type: DataType.INTEGER,
+        type: DataType.STRING,
         references: {
             model: "sections",
             key: "section_id",

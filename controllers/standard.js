@@ -1,20 +1,24 @@
 const db = require('../models/database'); 
-
+const m = require("./marks");
 class Standard{
  
 
     static async createStandard(db, obj) {
         try {
-            // Create a new standard record
-            const newStandard = await db.standard.create(obj);
+            
     
             // Define the table name based on the standard_name variable
             const table_name = 'marks' + obj.standard_name;
     
-            // Create a new table with the dynamic table name
-            await db.Sequelize.query(`CREATE TABLE ${table_name} (s_id VARCHAR(16), score INT, subject_id VARCHAR(20));`);
+            const r = m.createTable(db,table_name)
+            
+            // Create a new standard record
+            const newStandard = await db.standard.create(obj);
     
             return newStandard;
+                     
+            
+            
         } catch (error) {
             console.error('Error creating Standard:', error);
             throw error;

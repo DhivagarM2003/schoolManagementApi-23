@@ -1,12 +1,12 @@
 const db = require('../models/database'); 
-
+const id = require("shortid");
 class Teacher {
     
 
     static async createTeacher(db, obj) {
         try {
-           
-             
+            const t_id = id.generate();
+            obj.t_id = t_id;             
             const newTeacher = await db.teacher.create(obj);
             return newTeacher;
         } catch (error) {

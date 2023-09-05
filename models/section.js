@@ -4,12 +4,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     section_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
-      autoIncrement: true,
+      
     },
     t_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       references: {
         model: "teachers",
         key: "t_id",

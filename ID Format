@@ -4,9 +4,9 @@
 
 "section_id" : 05A                   stdCODE 05 THEN SEC CODE A,B,C
 
-"teacher_id" : 4 DIGIT ROLL NO 
+"teacher_id" :shortid 
 
-"subject_id" : ENG TAM MAT SCI SS GK CS 
+"subject_id" : 02ENG
 
 // subject_staff
 "id" : 

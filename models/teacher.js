@@ -4,9 +4,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     t_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
-      autoIncrement: true,
+      
       
     },
    

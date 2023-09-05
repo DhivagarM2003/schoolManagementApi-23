@@ -4,7 +4,7 @@ class Section{
 static async createSection(db, obj) {
     try {
        
-         
+        obj.section_id = obj.standard + obj.section_name;
         const newSection = await db.section.create(obj);
         return newSection;
     } catch (error) {

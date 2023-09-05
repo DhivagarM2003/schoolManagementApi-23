@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const subject = sequelize.define("subject", {
     subject_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
     },
     subject_name: {
