@@ -5,12 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     e_name: {
       type: DataTypes.STRING,
     },
-    
-    
     e_id: {
       type: DataTypes.STRING,
       primaryKey: true,
-      autoIncrement : true,
     },
     standard_name: {
       type: DataTypes.STRING,

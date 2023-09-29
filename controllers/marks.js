@@ -11,7 +11,7 @@ class marks{
     
             return true;
         } catch (error) {
-            console.error('Error creating msrks:', error);
+            console.error('Error creating marks:', error);
             throw error;
         }
     }

@@ -16,8 +16,8 @@ POST http://localhost:3000/admin/create_student  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "s_name":"gogil",
-    "section_id":"03a",
+    "s_name":"dhivastud",
+    "section_id":"06a",
     "blood_group":"B+",
     "address":"Chennai",
     "father_name":"mathiyalagan",
@@ -29,6 +29,8 @@ Content-Type: application/json
     "gender":"Male",
     "img":""
 }
+
+
 
 
 ###
@@ -118,7 +120,7 @@ POST http://localhost:3000/admin/create_standard  HTTP/1.1
 Content-Type: application/json 
 
 {
-     "standard_name": "03",
+     "standard_name": "06",
      "curriculum": "Ennum Ezuthum"
 }
 
@@ -151,7 +153,7 @@ Content-Type: application/json
 {
     "section_name":"a",
     //"t_id":"2",
-    "standard":"03"
+    "standard":"06"
 }
 
 

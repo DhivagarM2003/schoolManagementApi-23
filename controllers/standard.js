@@ -1,5 +1,6 @@
 const db = require('../models/database'); 
 const m = require("./marks");
+const att = require("./attendance");
 class Standard{
  
 
@@ -11,10 +12,12 @@ class Standard{
             const table_name = 'marks' + obj.standard_name;
     
             const r = m.createTable(db,table_name)
+            const atable_name = 'attendance' + obj.standard_name;
+            const p = att.createTable(db,atable_name)
             
             // Create a new standard record
             const newStandard = await db.standard.create(obj);
-    
+        
             return newStandard;
                      
             

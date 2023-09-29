@@ -5,6 +5,7 @@ obj.subject = require("./subject");
 obj.standard = require("./standard");
 obj.section = require("./section");
 obj.exam = require("./exam");
+obj.attendance = require("./attendance");
 
 
 module.exports = obj

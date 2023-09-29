@@ -17,7 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     standard: {
       type: DataTypes.STRING,
-      
+      references: {
+        model: "standards",
+        key: "standard_name",
+      },
     },
   });
 

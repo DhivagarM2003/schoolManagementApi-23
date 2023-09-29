@@ -125,6 +125,27 @@ router.post('/create_exam', async (req, res) => {
 });
 
 
+router.post('/create_absents', async (req, res) => {
+    try {
+        // Attempt to create a new student
+        const result = await obj.attendance.createRows(db,req.body);
+        
+        // Check the result and send an appropriate response
+        if (result) {
+            res.status(200).json({ "message": "Successfully inserted" });
+        } else {
+            res.status(500).json({ "error": "Failed to create student" });
+        }
+    } catch (error) {
+        // Handle errors by sending an error response
+        console.error('Error creating absents:', error);
+        res.status(500).json({ "error": "Internal server error" });
+    }
+});
+
+
+
+
 
 
 

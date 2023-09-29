@@ -1,6 +1,7 @@
 
 const db = require('../models/database'); 
 const id = require("shortid");
+const att = require('./attendance'); 
 
 class Student {
     
@@ -9,10 +10,11 @@ class Student {
     static async createStudent(db, obj) {
         try {           
             const s_id = id.generate();
-            obj.s_id = s_id;
+           
+            obj.s_id = s_id; 
             const newStudent = await db.student.create(obj);
             return newStudent;
-        } catch (error) {
+        } catch (error) { 
             console.error('Error creating student:', error);
             throw error;
         }
