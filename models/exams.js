@@ -5,18 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     e_name: {
       type: DataTypes.STRING,
     },
-    admin_id: {
-      type: DataTypes.STRING,
-      references: {
-        model: "admins",
-        key: "admin_id",
-      },
-    },
     e_id: {
       type: DataTypes.STRING,
       primaryKey: true,
     },
-    standard: {
+    standard_name: {
       type: DataTypes.STRING,
       
     },
@@ -26,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     e_date: {
       type: DataTypes.DATE,
     },
+    acad_year:{
+      type: DataTypes.STRING,
+    }
   });
 
   return exams;

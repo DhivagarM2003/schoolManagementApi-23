@@ -20,14 +20,17 @@ const db = {};
 db.Sequelize = Sequelize;
 db.Sequelize = Sequelize;
 
+
+db.standard = require("./standard")(Sequelize, Sequeliz.DataTypes);
+db.teacher = require("./teacher")(Sequelize, Sequeliz.DataTypes);
+db.subjectstaff = require("./subjectstaff")(Sequelize, Sequeliz.DataTypes);
 db.subject = require("./subject")(Sequelize, Sequeliz.DataTypes);
-db.activity = require("./activity")(Sequelize, Sequeliz.DataTypes);
 db.admin = require("./admin")(Sequelize, Sequeliz.DataTypes);
 db.exams = require("./exams")(Sequelize, Sequeliz.DataTypes);
-db.marks = require("./marks")(Sequelize, Sequeliz.DataTypes);
 db.section = require("./section")(Sequelize, Sequeliz.DataTypes);
 db.student = require("./student")(Sequelize, Sequeliz.DataTypes);
-db.teacher = require("./teacher")(Sequelize, Sequeliz.DataTypes);
+db.calendar = require("./calendar")(Sequelize, Sequeliz.DataTypes);
+
 
 db.Sequelize.sync({ force: false, alter: true }).then(() => {
   console.log("database connected 😀 ");

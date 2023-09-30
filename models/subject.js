@@ -1,26 +1,23 @@
 module.exports = (sequelize, DataTypes) => {
   const subject = sequelize.define("subject", {
     subject_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
     },
     subject_name: {
       type: DataTypes.STRING,
     },
-    t_id: {
+    standard_name: {
       type: DataTypes.STRING,
       references: {
-        model: "teachers",
-        key: "t_id",
+        model: "standards",
+        key: "standard_name",
       },
+      
     },
-    e_id: {
-      type: DataTypes.STRING,
-      references: {
-        model: "exams",
-        key: "e_id",
-      },
-    },
+   
+   
+    
   });
   return subject;
 };

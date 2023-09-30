@@ -1,8 +1,8 @@
 module.exports = {
   HOST: "localhost",
   USER: "root",
-  PASSWORD: "Dhiva2003@",
-  DB: "school_mate",
+  PASSWORD: "gogil",
+  DB: "schoolmate",
   dialect: "mysql",
   //dialectOptions: {ssl:true},
   pool: {

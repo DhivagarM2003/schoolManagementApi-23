@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     section_id: {
       type: DataTypes.STRING,
       primaryKey: true,
+      
     },
     t_id: {
       type: DataTypes.STRING,
@@ -16,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     standard: {
       type: DataTypes.STRING,
+      references: {
+        model: "standards",
+        key: "standard_name",
+      },
     },
   });
 

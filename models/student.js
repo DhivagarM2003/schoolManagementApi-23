@@ -6,14 +6,10 @@ module.exports = (sequelize, DataTypes) => {
     s_id: {
       type: DataTypes.STRING,
       primaryKey: true,
+      
+      
     },
-    admin_id: {
-      type: DataTypes.STRING,
-      references: {
-        model: "admins",
-        key: "admin_id",
-      },
-    },
+     
     section_id: {
       type: DataTypes.STRING,
       references: {
