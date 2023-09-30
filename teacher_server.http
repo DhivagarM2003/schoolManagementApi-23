@@ -75,3 +75,28 @@ Content-Type: application/json
   "s_id": "-fx4lG19K",
   "standard_name": "06"
 }
+
+
+###
+
+POST http://localhost:3000/admin/delete_absents HTTP/1.1
+Content-Type: application/json
+
+{
+  "s_id": "-fx4lG19K",
+  "standard_name" : "06"
+ 
+  
+}
+
+###
+
+POST http://localhost:3000/admin/update_score HTTP/1.1
+Content-Type: application/json
+
+{
+  "standard_name": "06",
+  "s_id": "-fx4lG19K",
+  "exam_id": "2018-05-12Mid-Eng03",
+  "newScore": 95
+}

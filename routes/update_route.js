@@ -122,6 +122,41 @@ router.post('/update_exam', async (req, res) => {
 });
 
 
+router.post('/update_score', async (req, res) => {
+    try {
+        const { standard_name, s_id, exam_id, newScore } = req.body;
+
+        // Attempt to update the score
+        const message = await obj.marks.updateScore(db, standard_name, s_id, exam_id, newScore);
+
+        // Check the result and send an appropriate response
+        if (message) {
+            res.status(200).json({ "message": message });
+        } else {
+            res.status(500).json({ "error": "Failed to update score" });
+        }
+    } catch (error) {
+        // Handle errors by sending an error response
+        console.error('Error updating score:', error);
+        res.status(500).json({ "error": "Internal server error" });
+    }
+});
+
+router.post('/update_event', async (req, res) => {
+    try {
+        
+        const result = await obj.calendar.updateEvent(db, req.body.date, req.body);
+        if (result) {
+            res.status(200).json({ "message": "Successfully updated" });
+        } else {
+            res.status(500).json({ "error": "Failed to update event" });
+        }
+    } catch (error) {
+        res.status(500).json({ "error": "Error updating event", "details": error.message });
+    }
+}); 
+
+
 
 
 

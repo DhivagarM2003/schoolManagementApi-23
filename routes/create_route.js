@@ -143,6 +143,17 @@ router.post('/create_absents', async (req, res) => {
     }
 });
 
+router.post('/create_event', async (req, res) => {
+    try {
+        const { date, event, status } = req.body;
+        const newEvent = await obj.calendar.createEvent(db, date, event, status);
+        res.status(200).json({ "message": "Event created successfully", "data": newEvent });
+    } catch (error) {
+        res.status(500).json({ "error": "Error creating event", "details": error.message });
+    }
+});
+
+
 
 
 

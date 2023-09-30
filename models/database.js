@@ -29,7 +29,7 @@ db.admin = require("./admin")(Sequelize, Sequeliz.DataTypes);
 db.exams = require("./exams")(Sequelize, Sequeliz.DataTypes);
 db.section = require("./section")(Sequelize, Sequeliz.DataTypes);
 db.student = require("./student")(Sequelize, Sequeliz.DataTypes);
-
+db.calendar = require("./calendar")(Sequelize, Sequeliz.DataTypes);
 
 
 db.Sequelize.sync({ force: false, alter: true }).then(() => {

@@ -53,6 +53,27 @@ class marks{
             throw error;
         }
     }
+
+
+    static async updateScore(db, standard_name, s_id, exam_id, newScore) {
+        try {
+            const table_name = "marks" + standard_name; // Concatenate standard_name to form table_name
+    
+            const sql = `UPDATE ${table_name} SET score = ? WHERE s_id = ? AND exam_id = ?;`;
+            const parameters = [newScore, s_id, exam_id];
+    
+            await db.Sequelize.query(sql, {
+                replacements: parameters,
+                type: db.Sequelize.QueryTypes.UPDATE
+            });
+    
+            return `Score updated for s_id: ${s_id}, exam_id: ${exam_id}`;
+        } catch (error) {
+            console.error('Error updating score:', error);
+            throw error;
+        }
+    }
+    
 }
 
     

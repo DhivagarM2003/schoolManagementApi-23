@@ -1,5 +1,6 @@
 
 
+
 class attendance {
     static async createTable(db, table_name) {
         try {
@@ -47,6 +48,24 @@ class attendance {
             throw error;
         }
     }
+    
+    static async deleteabsents(db, s_id,standard_name) {
+        try {
+            const table_name = "attendance" + standard_name;
+            const result = await db.Sequelize.query(
+                `DELETE FROM ${table_name} WHERE s_id = '${s_id}';`,
+                {  type: db.Sequelize.QueryTypes.DELETE }
+            );
+            return true;
+        } catch (error) {
+            console.error('Error deleting Absentee:', error);
+            throw error;
+        }
+    }
+    
+
 }
+
+
 
 module.exports = attendance;
