@@ -65,6 +65,15 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:3000/admin/view_student  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "section_id": "06a"
+
+}
+
+###
 
 
 POST http://localhost:3000/admin/create_teacher  HTTP/1.1
@@ -113,6 +122,20 @@ Content-Type: application/json
     "t_id": "1"
 
 }
+
+###
+POST http://localhost:3000/admin/view_teacherclass  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "t_id": "5z0Qjg_Pw"
+
+}
+
+###
+POST http://localhost:3000/admin/view_teacher  HTTP/1.1
+Content-Type: application/json 
+
 
 ###
 

@@ -1,5 +1,5 @@
 const db = require('../models/database'); 
-
+const id = require("shortid");
 class Subject {
     
   
@@ -7,7 +7,7 @@ class Subject {
     static async createSubject(db, obj) {
         try {
             const l = obj.subject_name.length
-            obj.subject_id =obj.subject_name.substring(0,l/2)+obj.standard_name              
+            obj.subject_id =id.generate()              
             const newSubject = await db.subject.create(obj);
             return newSubject;
         } catch (error) {

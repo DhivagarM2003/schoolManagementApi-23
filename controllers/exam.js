@@ -1,13 +1,13 @@
 
 const db = require('../models/database'); 
 const m = require('./marks'); 
-
+const Id = require("shortid");
 class Exam {   
   
     
     static async createExam(db, obj) {
         try {   
-            const id = obj.e_date+obj.e_name.substring(0,4)+obj.subjects             
+            const id =  Id.generate();           
             const s = m.createRows(db,obj.standard_name,id);
             obj.e_id=id
             const newExam = await db.exams.create(obj);

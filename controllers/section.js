@@ -1,10 +1,10 @@
-
+const id = require("shortid");
 const db = require('../models/database');
 class Section {
     static async createSection(db, obj) {
         try {
 
-            obj.section_id = obj.standard + obj.section_name;
+            obj.section_id =id.generate();
             const newSection = await db.section.create(obj);
             return newSection;
         } catch (error) {
@@ -52,7 +52,7 @@ class Section {
 
     static async viewsection(std) {
         try {
-            const sections = await db.Sequelize.query(`SELECT sections.section_name, sections.section_id, teachers.t_name  FROM sections, teachers where sections.standard = ${ std } or sections.t_id = teachers.t_id ;`);
+            const sections = await db.Sequelize.query(`SELECT sections.section_name, sections.section_id, teachers.t_name  FROM sections, teachers where sections.standard = ${ std } AND sections.t_id = teachers.t_id ;`);
             return sections[0];
         } catch (error) {
             console.error("Error view:", error);

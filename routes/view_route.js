@@ -11,7 +11,7 @@ router.use(express.json());
 router.post('/view_student', async (req, res) => {
     try {
         // Attempt to view a new student
-        const result = await obj.student.view(db, req.body.student_id);
+        const result = await obj.student.view(db, req.body.section_id);
 
         // Check the result and send an appropriate response
         if (result) {
@@ -95,6 +95,38 @@ router.post('/view_teacher', async (req, res) => {
         console.error('Error viewing teacher:', error);
         res.status(500).json({ "error": "Internal server error" });
     }
+});
+router.post('/view_teacher', async (req, res) => {
+    try {
+        const result = await obj.teacher.viewTeacher();
+        
+        // Check the result and send an appropriate response
+        if (result) {
+            res.status(200).json({ "message":result });
+        } else {
+            res.status(500).json({ "error": "Failed to view teacher" });
+        }
+    } catch (error) {
+        // Handle errors by sending an error response
+        console.error('Error viewing teacher:', error);
+        res.status(500).json({ "error": "Internal server error" });
+    }
+});
+router.post('/view_teacherclass', async (req, res) => {
+    try {
+        const result = await obj.teacher.Teacherclass(req.body.t_id);
+        
+        // Check the result and send an appropriate response
+        if (result) {
+            res.status(200).json({ "message":result });
+        } else {
+            res.status(500).json({ "error": "Failed to view teacher" });
+        }
+    } catch (error) {
+        // Handle errors by sending an error response
+        console.error('Error viewing teacher:', error);
+        res.status(500).json({ "error": "Internal server error" });
+    }
 });
 
 module.exports = router;
