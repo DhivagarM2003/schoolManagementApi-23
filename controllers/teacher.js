@@ -49,6 +49,17 @@ class Teacher {
             throw error;
         }
     }
+
+    static async viewTeacher() {
+        try {
+          const allTeachers = await db.teachers.findAll();
+          return allTeachers;
+        } catch (error) {
+          console.error("Error fetching all teachers:", error);
+          throw error;
+        }
+      }
+      
 }
 module.exports = Teacher;
 

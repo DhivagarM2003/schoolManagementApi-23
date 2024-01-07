@@ -152,7 +152,7 @@ Content-Type: application/json
 
 {
     "section_name":"a",
-    //"t_id":"2",
+    "t_id":"6cr7vLlwF",
     "standard":"06"
 }
 
@@ -164,10 +164,10 @@ Content-Type: application/json
 POST http://localhost:3000/admin/update_section  HTTP/1.1
 Content-Type: application/json 
 
-{   "section_id":"4",
-    "section_name":"12",
-    "t_id":"2",
-    "standard":"10th"
+{   "section_id":"06a",
+    "section_name":"a",
+    "t_id":"6cr7vLlwF",
+    "standard":"06"
 }
 
 ###
@@ -327,9 +327,6 @@ Content-Type: application/json
 POST http://localhost:3000/admin/view_teacher  HTTP/1.1
 Content-Type: application/json 
 
-{
-    "admin_id":"1"
-}
 
 
 ###
@@ -373,3 +370,32 @@ Content-Type: application/json
 {
     "date": "2023-10-05"
 }
+
+
+###
+
+POST http://localhost:3000/admin/view_standard  HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/admin/view_section  HTTP/1.1
+Content-Type: application/json 
+
+{
+    
+    "standard":"06"
+}
+
+
+###
+
+POST http://localhost:3000/admin/view_student  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "section_id": "06a"
+
+}
+
+###

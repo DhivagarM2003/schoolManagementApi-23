@@ -53,6 +53,12 @@ class Student {
             throw error;
         }
     }
+
+    static async view(db,id){
+        console.log(id);
+        const inf= await db.student.findAll({where:{section_id:id}});
+        return inf
+    }
 }
 module.exports = Student;
 
